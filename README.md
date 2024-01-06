@@ -1,4 +1,133 @@
 # djangostockapplication
+
+ENG 
+
+Description of Django Stock App Project
+
+This Django project aims to implement an inventory management and sales tracking application.
+
+The project includes the following main models: Category, Brand, Product, Firm, Purchases, Sales, and User.
+
+Various relationships are established between these models to provide inventory tracking and sales management.
+
+1.Category Table:
+
+name:
+
+2.Brand Table:
+
+name:
+
+image:
+
+3.Product Table:
+
+name:
+
+category: Should establish a relationship with the Category Table. ForeignKey - OneToOne or ManyToMany.
+
+brand: Should establish a relationship with the Brand Table. ForeignKey - OneToOne or ManyToMany.
+
+stock:
+
+created:
+
+updated:
+
+4.Firm Table:
+
+name:
+
+phone:
+
+address:
+
+image:
+
+created:
+
+updated:
+
+5.Purchases Table:
+
+user: Should establish a relationship with the User Table. ForeignKey - OneToOne or ManyToMany.
+
+firm: Should establish a relationship with the Firm Table. ForeignKey - OneToOne or ManyToMany.
+
+brand: Should establish a relationship with the Brand Table. ForeignKey - OneToOne or ManyToMany.
+
+quantity:
+
+price:
+
+price_total:
+
+created:
+
+updated:
+
+6.Sales Table:
+
+user: Should establish a relationship with the User Table. ForeignKey - OneToOne or ManyToMany.
+
+product: Should establish a relationship with the Product Table. ForeignKey - OneToOne or ManyToMany.
+
+brand: Should establish a relationship with the Brand Table. ForeignKey - OneToOne or ManyToMany.
+
+quantity:
+
+price:
+
+price_total:
+
+created:
+
+updated:
+
+7.A method should be written to calculate the total number of products for a Category.
+
+8.Add search(name) and filter(name) features for Category.
+
+9.Create a new serializer to view the details of products belonging to a Category when searching using the name filter at the Category entry point.
+
+10.Allow CRUD operations for users logged into the site for Category; only allow GET requests for non-logged-in users.
+
+11.Add search(name) feature for Brand.
+
+12.Allow CRUD operations for users logged into the site for Brand; only allow GET requests for non-logged-in users.
+
+13.Add search(name) feature for Firm.
+
+14.Allow CRUD operations for users logged into the site for Firm; only allow GET requests for non-logged-in users.
+
+15.Add search(name) and filter(category, brand) features for Product.
+
+16.Allow CRUD operations for users logged into the site for Product; only allow GET requests for non-logged-in users.
+
+17.The stock field in the Product Table should be read-only, as it should decrease or increase based on sales and purchases information.
+
+18.Calculate the price_total field in the Purchases Table. The price field represents the price of one unit, and the price_total should be the result of a mathematical calculation based on the quantity.
+
+19.Add search(firm) and filter(firm, product) features for Purchases.
+
+20.Allow CRUD operations for users logged into the site for Purchases; only allow GET requests for non-logged-in users.
+
+21.When a product is purchased, the stock quantity in the Product Table should increase.
+
+22.Automatically retrieve user information for each table where a relationship is established with the user table.
+
+23.When updating Purchases, consider stock quantities.
+
+24.When deleting Purchases, decrease the stock quantity.
+
+25.Include category information for products added to Purchases in the Purchases data.
+
+26.Similar operations performed in Purchases should be implemented in Sales. If a product in the Product Table is sold, the Sales quantity should be subtracted from the product stock quantity. If the sales exceed the stock quantity, issue a warning without allowing it.
+
+27.Add search(brand) and filter(brand, product) features for Sales.
+
+28.Allow CRUD operations for users logged into the site for Sales; only allow GET requests for non-logged-in users.
+
 TR 
 
 Django Stock App Projesi Açıklaması Bu Django projesi, bir stok yönetim ve satış takip uygulamasını gerçekleştirmeyi amaçlamaktadır. 
