@@ -44,6 +44,7 @@ created:
 updated:
 
 5- Purchases Tablosu:
+
 user: UserTablosu ile uygun olan ilişki kurulmalıdır. ForeigneKey - OneToOne veya ManyToMany
 
 firm: Firm Tablosu ile uygun olan ilişki kurulmalıdır. ForeigneKey - OneToOne veya ManyToMany
